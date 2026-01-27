@@ -2,9 +2,26 @@
 
 **Stop forgetting what you accomplished. Start showing your impact.**
 
+<p align="center">
+  <img src="docs/demo.svg" alt="Claude Code running /m365-evidence skill" width="700">
+</p>
+
 You work hard all week—shipping code, reviewing PRs, attending meetings, mentoring teammates, researching solutions. But when it's time for your weekly check-in or performance review, you're staring at a blank page trying to remember what you actually did.
 
-This project solves that problem by automatically collecting evidence of your work from everywhere it happens, then using AI to analyze it against your goals and generate impact reports tailored for different audiences.
+This project solves that problem with **Claude Code skills** that automatically collect evidence of your work from everywhere it happens:
+
+<table>
+<tr>
+<td align="center"><img src="https://cdn.simpleicons.org/github/white" width="40"><br><b>GitHub</b><br><sub>PRs, Issues, Reviews</sub></td>
+<td align="center"><img src="https://cdn.simpleicons.org/azuredevops/0078D4" width="40"><br><b>Azure DevOps</b><br><sub>Work Items, Sprints</sub></td>
+<td align="center"><img src="https://cdn.simpleicons.org/microsoft/white" width="40"><br><b>Microsoft 365</b><br><sub>Email, Teams, Meetings</sub></td>
+<td align="center"><img src="https://cdn.simpleicons.org/microsoftedge/white" width="40"><br><b>Edge Browser</b><br><sub>Research, Documentation</sub></td>
+<td align="center"><img src="https://cdn.simpleicons.org/openai/white" width="40"><br><b>M365 Copilot</b><br><sub>Chat History</sub></td>
+<td align="center"><img src="https://cdn.simpleicons.org/anthropic/white" width="40"><br><b>Claude Code</b><br><sub>Sessions, Prompts</sub></td>
+</tr>
+</table>
+
+Then AI analyzes your evidence against your goals and generates **impact reports tailored for different audiences**—your manager, skip-level, executive, and team.
 
 ## What You Can Accomplish
 
