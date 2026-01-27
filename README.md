@@ -161,7 +161,11 @@ cp config.example.yaml config.yaml
 ```
 
 ### 2. Set Up Your Goals
-Create `goals.md` with your OKRs, key results, and success criteria. The impact analysis will score your week against these.
+```bash
+cp goals.example.md goals.md
+# Edit goals.md with your OKRs, key results, and success criteria
+```
+The impact analysis will score your week against these goals. See `goals.example.md` for the expected format.
 
 ### 3. Set Environment Variables
 ```bash
@@ -218,7 +222,8 @@ claude
 │   └── edge-evidence/
 ├── tools/
 │   └── copilot-scraper/      # Playwright-based M365 Copilot scraper
-├── config.example.yaml       # Template (committed)
+├── config.example.yaml       # Config template (committed)
+├── goals.example.md          # Goals template (committed)
 ├── .mcp.json                 # MCP server configuration
 │
 │  ─── Personal (gitignored) ───
