@@ -1,3 +1,13 @@
+---
+name: m365copilot-evidence
+description: Collect M365 Copilot (BizChat) conversation history by scraping the web UI. Use when gathering evidence of AI-assisted work for weekly reporting.
+license: MIT
+compatibility: Requires Edge browser with Windows SSO. Local execution only.
+metadata:
+  author: bgervin
+  version: "1.0"
+---
+
 # Collect M365 Copilot Chat Evidence for Weekly Impact Reporting
 
 Collect M365 Copilot (BizChat) conversation history for the past week and create an evidence file using the Playwright scraper.

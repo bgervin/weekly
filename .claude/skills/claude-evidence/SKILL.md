@@ -1,3 +1,13 @@
+---
+name: claude-evidence
+description: Collect Claude Code session history including prompts and projects worked on. Use when gathering evidence of AI-assisted development for weekly reporting.
+license: MIT
+compatibility: Requires local access to ~/.claude/history.jsonl. Local execution only.
+metadata:
+  author: bgervin
+  version: "1.0"
+---
+
 # Collect Claude Code Evidence for Weekly Impact Reporting
 
 Collect all Claude Code conversation activity for the past week and create an evidence file.

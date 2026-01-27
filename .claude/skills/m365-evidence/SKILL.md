@@ -1,3 +1,13 @@
+---
+name: m365-evidence
+description: Collect Microsoft 365 activity including emails sent, Teams messages, meetings attended, and files edited. Use when gathering evidence of collaboration for weekly reporting.
+license: MIT
+compatibility: Requires workiq MCP server with Microsoft Graph access.
+metadata:
+  author: bgervin
+  version: "1.0"
+---
+
 # Collect M365 Evidence for Weekly Impact Reporting
 
 Collect all Microsoft 365 activity for the past week and create an evidence file using the WorkIQ MCP.

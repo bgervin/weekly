@@ -1,3 +1,13 @@
+---
+name: ado-evidence
+description: Collect Azure DevOps work item activity including state changes, comments, and revisions. Use when gathering evidence of ADO contributions for weekly reporting.
+license: MIT
+compatibility: Requires azure-devops MCP server and ADO_PAT environment variable.
+metadata:
+  author: bgervin
+  version: "1.0"
+---
+
 # Collect ADO Evidence for Weekly Impact Reporting
 
 Collect all Azure DevOps work item activity for the past week and create an evidence file using the ADO MCP server.

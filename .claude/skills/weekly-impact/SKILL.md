@@ -1,3 +1,12 @@
+---
+name: weekly-impact
+description: Generate comprehensive weekly impact reports by analyzing collected evidence against your goals. Creates audience-specific summaries for manager, skip-level, executive, and team. Use after running evidence collection skills.
+license: MIT
+metadata:
+  author: bgervin
+  version: "1.0"
+---
+
 # Weekly Impact Analysis
 
 Generate a comprehensive weekly impact analysis comparing evidence against goals.

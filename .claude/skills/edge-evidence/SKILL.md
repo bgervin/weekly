@@ -1,3 +1,13 @@
+---
+name: edge-evidence
+description: Collect Edge browser history including documentation research, ADO/GitHub activity, and tool usage. Use when gathering evidence of research and context-switching for weekly reporting.
+license: MIT
+compatibility: Requires edge-history MCP server and local Edge browser profile. Local execution only.
+metadata:
+  author: bgervin
+  version: "1.0"
+---
+
 # Collect Edge Browser Evidence for Weekly Impact Reporting
 
 Collect all Edge browser history for the past week and create an evidence file summarizing browsing activity.

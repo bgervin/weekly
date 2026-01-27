@@ -260,6 +260,21 @@ claude
 - GitHub personal access token
 - Azure DevOps personal access token
 
+## Agent Skills Compatible
+
+These skills follow the open [Agent Skills](https://agentskills.io) specification, meaning they work across multiple AI tools:
+
+| Tool | Status |
+|------|--------|
+| Claude Code | Native support |
+| Cursor | Compatible |
+| VS Code (Copilot/Claude) | Compatible |
+| Gemini CLI | Compatible |
+| OpenAI Codex | Compatible |
+| Roo Code, Amp, Goose | Compatible |
+
+See the full list of [compatible tools](https://agentskills.io/home).
+
 ## Philosophy
 
 This project embodies a few beliefs:

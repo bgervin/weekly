@@ -1,3 +1,13 @@
+---
+name: github-evidence
+description: Collect GitHub PRs created, reviewed, and merged, plus issues and comments. Use when gathering evidence of code contributions for weekly reporting.
+license: MIT
+compatibility: Requires github MCP server and GITHUB_TOKEN environment variable.
+metadata:
+  author: bgervin
+  version: "1.0"
+---
+
 # Collect GitHub Evidence for Weekly Impact Reporting
 
 Collect all GitHub activity for the specified user over the past week and create an evidence file.
