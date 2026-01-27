@@ -1,0 +1,19 @@
+# Personal data - never commit
+config.yaml
+goals.md
+weeks/
+
+# Scraper personal data
+tools/copilot-scraper/.edge-profile/
+tools/copilot-scraper/.browser-profile/
+tools/copilot-scraper/copilot-history.json
+tools/copilot-scraper/*.png
+tools/copilot-scraper/*.html
+tools/copilot-scraper/node_modules/
+
+# System files
+.DS_Store
+*.db
+
+# Claude local overrides
+.claude/*.local.*

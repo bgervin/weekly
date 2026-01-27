@@ -1,0 +1,19 @@
+# Weekly Impact Reporting Configuration
+# Copy this to config.yaml and fill in your values
+
+# Your identity
+user_name: "Your Name"
+user_email: "you@company.com"
+
+# GitHub
+github_username: "your-github-handle"
+
+# Azure DevOps
+ado_project: "Your-ADO-Project"
+ado_organization: "your-org.visualstudio.com"
+
+# Report recipients (used in weekly-impact skill)
+manager_name: "Your Manager"
+skip_level_name: "Your Skip Level"
+executive_name: "Your Executive"
+team_name: "Your Team Name"

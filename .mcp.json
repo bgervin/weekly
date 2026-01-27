@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      }
+    },
+    "azure-devops": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-azure-devops"],
+      "env": {
+        "AZURE_DEVOPS_ORG_URL": "${ADO_ORG_URL}",
+        "AZURE_DEVOPS_PAT": "${ADO_PAT}"
+      }
+    },
+    "workiq": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-workiq"]
+    }
+  }
+}
