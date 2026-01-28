@@ -1,0 +1,12 @@
+{
+  "name": "weekly",
+  "description": "Weekly impact reporting skills and tools",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "weekly-reporting",
+      "path": ".",
+      "description": "Collect evidence and generate weekly impact reports"
+    }
+  ]
+}

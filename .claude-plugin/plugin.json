@@ -1,0 +1,13 @@
+{
+  "name": "weekly-reporting",
+  "version": "1.0.0",
+  "description": "Automated weekly impact reporting. Collects evidence from GitHub, ADO, M365, Edge, Copilot, and Claude Code, then generates audience-specific impact reports aligned to your goals.",
+  "author": "bgervin",
+  "license": "MIT",
+  "homepage": "https://github.com/bgervin/weekly",
+  "repository": "https://github.com/bgervin/weekly",
+  "keywords": ["weekly", "impact", "reporting", "evidence", "goals", "okr"],
+  "engines": {
+    "claude-code": ">=2.0.0"
+  }
+}

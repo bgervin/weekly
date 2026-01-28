@@ -167,38 +167,71 @@ on OBO token integration.
 Barry
 ```
 
-## Quick Start
+## Installation
 
-### 1. Clone and Configure
+### Claude Code Plugin (Recommended)
+
+```bash
+# Install with one command
+claude plugin install weekly-reporting@bgervin/weekly
+```
+
+Then configure:
+```bash
+# Copy templates to your config directory
+mkdir -p ~/weekly-data
+cp ~/.claude/plugins/weekly-reporting/config.example.yaml ~/weekly-data/config.yaml
+cp ~/.claude/plugins/weekly-reporting/goals.example.md ~/weekly-data/goals.md
+
+# Edit with your details
+code ~/weekly-data/config.yaml
+code ~/weekly-data/goals.md
+```
+
+**Optional:** For M365 Copilot chat evidence, install the scraper:
+```bash
+cd ~/.claude/plugins/weekly-reporting/tools/copilot-scraper
+npm install
+```
+
+> **Tip:** Add the marketplace for easy updates:
+> ```bash
+> claude plugin marketplace add bgervin/weekly
+> claude plugin update weekly-reporting
+> ```
+
+### Clone Directly (for customization)
+
 ```bash
 git clone https://github.com/bgervin/weekly.git ~/weekly
 cd ~/weekly
 cp config.example.yaml config.yaml
-# Edit config.yaml with your details
-```
-
-### 2. Set Up Your Goals
-```bash
 cp goals.example.md goals.md
-# Edit goals.md with your OKRs, key results, and success criteria
 ```
-The impact analysis will score your week against these goals. See `goals.example.md` for the expected format.
 
-### 3. Set Environment Variables
+### Other Agent Skills-Compatible Tools
+
+These skills follow the [Agent Skills](https://agentskills.io) specification and work with:
+- Cursor
+- VS Code (with Claude/Copilot extensions)
+- Gemini CLI
+- OpenAI Codex
+- Roo Code, Amp, Goose, and 20+ more
+
+Clone the repo and point your tool at the `skills/` directory.
+
+## Environment Variables
+
 ```bash
 export GITHUB_TOKEN="your-github-pat"
 export ADO_ORG_URL="https://dev.azure.com/your-org"
 export ADO_PAT="your-ado-pat"
 ```
 
-### 4. Install Dependencies
-```bash
-cd tools/copilot-scraper && npm install
-```
+## Usage
 
-### 5. Collect Evidence & Generate Reports
 ```bash
-cd ~/weekly
+cd ~/weekly  # or your weekly-data directory
 claude
 
 # Collect evidence from all sources
@@ -228,8 +261,11 @@ claude
 ## Directory Structure
 
 ```
-~/weekly/
-├── .claude/skills/           # The skills that power everything
+weekly/
+├── .claude-plugin/           # Plugin metadata
+│   ├── plugin.json           # Plugin configuration
+│   └── marketplace.json      # Marketplace manifest
+├── skills/                   # The skills that power everything
 │   ├── weekly-impact/
 │   ├── ado-evidence/
 │   ├── github-evidence/
@@ -259,21 +295,6 @@ claude
 - Edge browser (for M365 Copilot scraper with Windows SSO)
 - GitHub personal access token
 - Azure DevOps personal access token
-
-## Agent Skills Compatible
-
-These skills follow the open [Agent Skills](https://agentskills.io) specification, meaning they work across multiple AI tools:
-
-| Tool | Status |
-|------|--------|
-| Claude Code | Native support |
-| Cursor | Compatible |
-| VS Code (Copilot/Claude) | Compatible |
-| Gemini CLI | Compatible |
-| OpenAI Codex | Compatible |
-| Roo Code, Amp, Goose | Compatible |
-
-See the full list of [compatible tools](https://agentskills.io/home).
 
 ## Philosophy
 

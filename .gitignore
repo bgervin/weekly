@@ -3,6 +3,11 @@ config.yaml
 goals.md
 weeks/
 
+# Plugin user data (when installed as plugin)
+# These are created by users in their plugin install directory
+*.local.yaml
+*.local.md
+
 # Scraper personal data
 tools/copilot-scraper/.edge-profile/
 tools/copilot-scraper/.browser-profile/
