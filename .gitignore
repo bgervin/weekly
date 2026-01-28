@@ -9,13 +9,19 @@ test-results/
 *.local.yaml
 *.local.md
 
-# Scraper personal data
+# Scraper personal data (both root and plugin locations)
 tools/copilot-scraper/.edge-profile/
 tools/copilot-scraper/.browser-profile/
 tools/copilot-scraper/copilot-history.json
 tools/copilot-scraper/*.png
 tools/copilot-scraper/*.html
 tools/copilot-scraper/node_modules/
+plugins/*/tools/copilot-scraper/node_modules/
+plugins/*/tools/copilot-scraper/.edge-profile/
+plugins/*/tools/copilot-scraper/.browser-profile/
+plugins/*/tools/copilot-scraper/copilot-history.json
+plugins/*/tools/copilot-scraper/*.png
+plugins/*/tools/copilot-scraper/*.html
 
 # System files
 .DS_Store

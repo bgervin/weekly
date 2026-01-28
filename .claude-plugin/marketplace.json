@@ -16,13 +16,12 @@
       "author": {
         "name": "Barry Gervin"
       },
-      "source": {
-        "source": "github",
-        "repo": "bgervin/weekly"
-      },
+      "source": "./plugins/weekly-reporting",
       "category": "productivity",
       "tags": ["weekly", "impact", "reporting", "evidence", "goals", "okr"],
-      "keywords": ["weekly", "impact", "reporting", "evidence", "goals", "okr"]
+      "keywords": ["weekly", "impact", "reporting", "evidence", "goals", "okr"],
+      "homepage": "https://github.com/bgervin/weekly",
+      "repository": "https://github.com/bgervin/weekly"
     }
   ]
 }
