@@ -2,6 +2,7 @@
 config.yaml
 goals.md
 weeks/
+test-results/
 
 # Plugin user data (when installed as plugin)
 # These are created by users in their plugin install directory

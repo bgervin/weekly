@@ -1,12 +1,28 @@
 {
   "name": "weekly",
-  "description": "Weekly impact reporting skills and tools",
-  "version": "1.0.0",
+  "owner": {
+    "name": "Barry Gervin",
+    "email": "bgervin@github.com"
+  },
+  "metadata": {
+    "description": "Weekly impact reporting skills and tools",
+    "version": "1.0.0"
+  },
   "plugins": [
     {
       "name": "weekly-reporting",
-      "path": ".",
-      "description": "Collect evidence and generate weekly impact reports"
+      "description": "Collect evidence from GitHub, ADO, M365, Edge, Copilot, and Claude Code, then generate audience-specific weekly impact reports aligned to your goals.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Barry Gervin"
+      },
+      "source": {
+        "source": "github",
+        "repo": "bgervin/weekly"
+      },
+      "category": "productivity",
+      "tags": ["weekly", "impact", "reporting", "evidence", "goals", "okr"],
+      "keywords": ["weekly", "impact", "reporting", "evidence", "goals", "okr"]
     }
   ]
 }
