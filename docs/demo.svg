@@ -1,13 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
   <defs>
     <linearGradient id="headerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#3d3d3d"/>
       <stop offset="100%" style="stop-color:#2d2d2d"/>
     </linearGradient>
+    <linearGradient id="previewGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2a2a"/>
+      <stop offset="100%" style="stop-color:#222"/>
+    </linearGradient>
   </defs>
 
   <!-- Terminal window -->
-  <rect width="800" height="420" rx="10" fill="#1a1a1a"/>
+  <rect width="800" height="480" rx="10" fill="#1a1a1a"/>
 
   <!-- Title bar -->
   <rect width="800" height="32" rx="10" fill="url(#headerGrad)"/>
@@ -21,55 +25,206 @@
   <!-- Title -->
   <text x="400" y="21" font-family="SF Mono, Menlo, monospace" font-size="13" fill="#999" text-anchor="middle">claude — ~/weekly</text>
 
-  <!-- Terminal content -->
-  <g font-family="SF Mono, Menlo, Consolas, monospace" font-size="13">
-    <!-- Prompt and command -->
-    <text x="20" y="60" fill="#7c7c7c">~/weekly</text>
-    <text x="95" y="60" fill="#d4a656">❯</text>
-    <text x="115" y="60" fill="#c5c5c5">/m365-evidence</text>
+  <!-- ==================== SCENE 1: Evidence Collection ==================== -->
+  <g id="scene1">
+    <animate attributeName="opacity" values="1;1;1;0;0;0;0;0;0;1" dur="15s" repeatCount="indefinite"/>
 
-    <!-- Skill header -->
-    <text x="20" y="95" fill="#6b9fed">╭─────────────────────────────────────────────────────────────╮</text>
-    <text x="20" y="115" fill="#6b9fed">│</text>
-    <text x="45" y="115" fill="#d19a66">⚡</text>
-    <text x="65" y="115" fill="#c5c5c5">Running skill:</text>
-    <text x="180" y="115" fill="#98c379">m365-evidence</text>
-    <text x="635" y="115" fill="#6b9fed">│</text>
-    <text x="20" y="135" fill="#6b9fed">╰─────────────────────────────────────────────────────────────╯</text>
+    <g font-family="SF Mono, Menlo, Consolas, monospace" font-size="13">
+      <!-- Previous commands (dimmed) -->
+      <text x="20" y="55" fill="#555">~/weekly</text>
+      <text x="95" y="55" fill="#665c3a">❯</text>
+      <text x="115" y="55" fill="#666">/github-evidence</text>
+      <text x="20" y="75" fill="#3a5a4a">✓</text>
+      <text x="40" y="75" fill="#555">Evidence written to ~/weekly/weeks/2026-01-25/evidence/github.md</text>
 
-    <!-- Progress section -->
-    <text x="20" y="170" fill="#61afef">⠋</text>
-    <text x="40" y="170" fill="#abb2bf">Collecting M365 evidence for week of 2026-01-19 to 2026-01-25...</text>
+      <text x="20" y="100" fill="#555">~/weekly</text>
+      <text x="95" y="100" fill="#665c3a">❯</text>
+      <text x="115" y="100" fill="#666">/ado-evidence</text>
+      <text x="20" y="120" fill="#3a5a4a">✓</text>
+      <text x="40" y="120" fill="#555">Evidence written to ~/weekly/weeks/2026-01-25/evidence/ado.md</text>
 
-    <!-- Query results -->
-    <text x="20" y="205" fill="#56b6c2">✓</text>
-    <text x="40" y="205" fill="#abb2bf">Queried emails:</text>
-    <text x="165" y="205" fill="#98c379">23 sent/replied</text>
+      <!-- Current command -->
+      <text x="20" y="155" fill="#7c7c7c">~/weekly</text>
+      <text x="95" y="155" fill="#d4a656">❯</text>
+      <text x="115" y="155" fill="#c5c5c5">/m365-evidence</text>
 
-    <text x="20" y="230" fill="#56b6c2">✓</text>
-    <text x="40" y="230" fill="#abb2bf">Queried Teams:</text>
-    <text x="165" y="230" fill="#98c379">47 message threads</text>
+      <!-- Skill header -->
+      <text x="20" y="185" fill="#6b9fed">╭──────────────────────────────────────────────────────────────╮</text>
+      <text x="20" y="205" fill="#6b9fed">│</text>
+      <text x="45" y="205" fill="#d19a66">⚡</text>
+      <text x="65" y="205" fill="#c5c5c5">Running skill:</text>
+      <text x="180" y="205" fill="#98c379">m365-evidence</text>
+      <text x="642" y="205" fill="#6b9fed">│</text>
+      <text x="20" y="225" fill="#6b9fed">╰──────────────────────────────────────────────────────────────╯</text>
 
-    <text x="20" y="255" fill="#56b6c2">✓</text>
-    <text x="40" y="255" fill="#abb2bf">Queried meetings:</text>
-    <text x="180" y="255" fill="#98c379">12 attended (8 with transcripts)</text>
+      <!-- Progress items with staggered animation -->
+      <g>
+        <text x="20" y="260" fill="#56b6c2">✓</text>
+        <text x="40" y="260" fill="#abb2bf">Emails:</text>
+        <text x="110" y="260" fill="#98c379">23 sent/replied</text>
+        <animate attributeName="opacity" values="0;0;1;1;1;1;1;1;1;1" dur="15s" repeatCount="indefinite"/>
+      </g>
 
-    <text x="20" y="280" fill="#56b6c2">✓</text>
-    <text x="40" y="280" fill="#abb2bf">Queried files:</text>
-    <text x="150" y="280" fill="#98c379">15 documents edited</text>
+      <g>
+        <text x="20" y="285" fill="#56b6c2">✓</text>
+        <text x="40" y="285" fill="#abb2bf">Teams:</text>
+        <text x="105" y="285" fill="#98c379">47 threads</text>
+        <animate attributeName="opacity" values="0;0;0;1;1;1;1;1;1;1" dur="15s" repeatCount="indefinite"/>
+      </g>
 
-    <text x="20" y="305" fill="#56b6c2">✓</text>
-    <text x="40" y="305" fill="#abb2bf">Queried Loop:</text>
-    <text x="145" y="305" fill="#98c379">6 components updated</text>
+      <g>
+        <text x="20" y="310" fill="#56b6c2">✓</text>
+        <text x="40" y="310" fill="#abb2bf">Meetings:</text>
+        <text x="125" y="310" fill="#98c379">12 attended (8 w/ transcripts)</text>
+        <animate attributeName="opacity" values="0;0;0;0;1;1;1;1;1;1" dur="15s" repeatCount="indefinite"/>
+      </g>
 
-    <!-- Output file -->
-    <text x="20" y="345" fill="#61afef">📄</text>
-    <text x="45" y="345" fill="#abb2bf">Evidence written to:</text>
-    <text x="45" y="368" fill="#e5c07b">~/weekly/weeks/2026-01-25/evidence/M365.md</text>
+      <g>
+        <text x="20" y="335" fill="#56b6c2">✓</text>
+        <text x="40" y="335" fill="#abb2bf">Files:</text>
+        <text x="95" y="335" fill="#98c379">15 documents edited</text>
+        <animate attributeName="opacity" values="0;0;0;0;0;1;1;1;1;1" dur="15s" repeatCount="indefinite"/>
+      </g>
 
-    <!-- Cursor -->
-    <rect x="20" y="392" width="8" height="16" fill="#528bff">
-      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
-    </rect>
+      <!-- Output -->
+      <g>
+        <text x="20" y="375" fill="#61afef">📄</text>
+        <text x="45" y="375" fill="#abb2bf">Evidence written to:</text>
+        <text x="45" y="398" fill="#e5c07b">~/weekly/weeks/2026-01-25/evidence/M365.md</text>
+        <animate attributeName="opacity" values="0;0;0;0;0;0;1;1;1;1" dur="15s" repeatCount="indefinite"/>
+      </g>
+
+      <!-- Ready for next command -->
+      <g>
+        <text x="20" y="435" fill="#7c7c7c">~/weekly</text>
+        <text x="95" y="435" fill="#d4a656">❯</text>
+        <rect x="115" y="420" width="8" height="16" fill="#528bff">
+          <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+        </rect>
+        <animate attributeName="opacity" values="0;0;0;0;0;0;0;1;1;0" dur="15s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== SCENE 2: Weekly Impact Generation ==================== -->
+  <g id="scene2">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0;0;1;1;1;0;0;0;0" dur="15s" repeatCount="indefinite"/>
+
+    <g font-family="SF Mono, Menlo, Consolas, monospace" font-size="13">
+      <!-- Command -->
+      <text x="20" y="55" fill="#7c7c7c">~/weekly</text>
+      <text x="95" y="55" fill="#d4a656">❯</text>
+      <text x="115" y="55" fill="#c5c5c5">/weekly-impact</text>
+
+      <!-- Skill header -->
+      <text x="20" y="85" fill="#6b9fed">╭──────────────────────────────────────────────────────────────╮</text>
+      <text x="20" y="105" fill="#6b9fed">│</text>
+      <text x="45" y="105" fill="#d19a66">⚡</text>
+      <text x="65" y="105" fill="#c5c5c5">Running skill:</text>
+      <text x="180" y="105" fill="#98c379">weekly-impact</text>
+      <text x="642" y="105" fill="#6b9fed">│</text>
+      <text x="20" y="125" fill="#6b9fed">╰──────────────────────────────────────────────────────────────╯</text>
+
+      <!-- Analysis steps -->
+      <text x="20" y="160" fill="#56b6c2">✓</text>
+      <text x="40" y="160" fill="#abb2bf">Loaded 6 evidence files</text>
+
+      <text x="20" y="185" fill="#56b6c2">✓</text>
+      <text x="40" y="185" fill="#abb2bf">Read goals.md (5 objectives, 12 key results)</text>
+
+      <text x="20" y="210" fill="#56b6c2">✓</text>
+      <text x="40" y="210" fill="#abb2bf">Analyzed goal alignment</text>
+
+      <!-- Generated reports -->
+      <text x="20" y="250" fill="#c678dd">Generated reports:</text>
+
+      <text x="35" y="275" fill="#56b6c2">✓</text>
+      <text x="55" y="275" fill="#e5c07b">impact.md</text>
+      <text x="160" y="275" fill="#666">— Full analysis with time breakdown</text>
+
+      <text x="35" y="300" fill="#56b6c2">✓</text>
+      <text x="55" y="300" fill="#e5c07b">to-manager.md</text>
+      <text x="190" y="300" fill="#666">— Tactical weekly update</text>
+
+      <text x="35" y="325" fill="#56b6c2">✓</text>
+      <text x="55" y="325" fill="#e5c07b">to-skip-level.md</text>
+      <text x="200" y="325" fill="#666">— Strategic summary</text>
+
+      <text x="35" y="350" fill="#56b6c2">✓</text>
+      <text x="55" y="350" fill="#e5c07b">to-executive.md</text>
+      <text x="195" y="350" fill="#666">— Business outcomes</text>
+
+      <text x="35" y="375" fill="#56b6c2">✓</text>
+      <text x="55" y="375" fill="#e5c07b">to-team.md</text>
+      <text x="165" y="375" fill="#666">— Team context &amp; recognition</text>
+
+      <!-- Output path -->
+      <text x="20" y="415" fill="#61afef">📁</text>
+      <text x="45" y="415" fill="#abb2bf">Output:</text>
+      <text x="110" y="415" fill="#e5c07b">~/weekly/weeks/2026-01-25/impact/</text>
+
+      <!-- Prompt -->
+      <text x="20" y="455" fill="#7c7c7c">~/weekly</text>
+      <text x="95" y="455" fill="#d4a656">❯</text>
+      <rect x="115" y="440" width="8" height="16" fill="#528bff">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- ==================== SCENE 3: Email Preview ==================== -->
+  <g id="scene3">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0;0;0;0;0;1;1;1;1" dur="15s" repeatCount="indefinite"/>
+
+    <!-- Preview window background -->
+    <rect x="40" y="45" width="720" height="400" rx="8" fill="#252526"/>
+    <rect x="40" y="45" width="720" height="30" rx="8" fill="url(#previewGrad)"/>
+    <rect x="40" y="67" width="720" height="8" fill="url(#previewGrad)"/>
+
+    <!-- Preview header -->
+    <text x="60" y="65" font-family="SF Mono, Menlo, monospace" font-size="11" fill="#888">to-manager.md — Preview</text>
+    <text x="720" y="65" font-family="SF Mono, Menlo, monospace" font-size="11" fill="#666">Markdown</text>
+
+    <!-- Email content (rendered markdown style) -->
+    <g font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+      <!-- Greeting -->
+      <text x="60" y="105" font-size="15" fill="#d4d4d4">Hi Nik,</text>
+
+      <!-- TL;DR Section -->
+      <text x="60" y="140" font-size="17" font-weight="bold" fill="#569cd6">TL;DR</text>
+      <text x="60" y="165" font-size="14" fill="#c5c5c5">Shipped the Agent Quality evaluation framework PR and unblocked</text>
+      <text x="60" y="183" font-size="14" fill="#c5c5c5">the Azure team on OBO token integration.</text>
+
+      <!-- Progress Section -->
+      <text x="60" y="218" font-size="17" font-weight="bold" fill="#569cd6">Progress on Key Deliverables</text>
+
+      <text x="60" y="248" font-size="15" font-weight="600" fill="#dcdcaa">Agent Quality (OKR 1.5.2)</text>
+      <text x="70" y="270" font-size="13" fill="#c5c5c5">• Merged PR #847: evaluation scoring pipeline with 94% test coverage</text>
+      <text x="70" y="290" font-size="13" fill="#c5c5c5">• Presented approach to DevX/Azure stakeholders - got Phase 1 alignment</text>
+
+      <text x="60" y="320" font-size="15" font-weight="600" fill="#dcdcaa">Time-to-Value (OKRs 1.5.1/1.5.3)</text>
+      <text x="70" y="342" font-size="13" fill="#c5c5c5">• Debugged OBO token refresh issue blocking Contoso pilot</text>
+      <text x="70" y="362" font-size="13" fill="#c5c5c5">• Started spec for "zero-friction" starter template</text>
+
+      <!-- Blockers Section -->
+      <text x="60" y="397" font-size="17" font-weight="bold" fill="#ce9178">Blockers Needing Your Help</text>
+      <text x="70" y="422" font-size="13" fill="#c5c5c5">• Need intro to Privacy team for data retention review</text>
+    </g>
+
+    <!-- Signature fade -->
+    <rect x="40" y="430" width="720" height="15" fill="url(#previewGrad)"/>
+  </g>
+
+  <!-- Progress indicator dots -->
+  <g transform="translate(370, 465)">
+    <circle cx="0" cy="0" r="4" fill="#444">
+      <animate attributeName="fill" values="#528bff;#444;#444" dur="15s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="20" cy="0" r="4" fill="#444">
+      <animate attributeName="fill" values="#444;#528bff;#444" dur="15s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="40" cy="0" r="4" fill="#444">
+      <animate attributeName="fill" values="#444;#444;#528bff" dur="15s" repeatCount="indefinite"/>
+    </circle>
   </g>
 </svg>
