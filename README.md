@@ -165,41 +165,46 @@ Barry
 ### Claude Code Plugin (Recommended)
 
 ```bash
-# Install with one command
-claude plugin install weekly-reporting@bgervin/weekly
+# Step 1: Add the marketplace
+claude plugin marketplace add bgervin/weekly
+
+# Step 2: Install the plugin
+claude plugin install weekly-reporting@weekly
 ```
 
 Then configure:
 ```bash
-# Copy templates to your config directory
+# Create a working directory for your weekly data
 mkdir -p ~/weekly-data
-cp ~/.claude/plugins/weekly-reporting/config.example.yaml ~/weekly-data/config.yaml
-cp ~/.claude/plugins/weekly-reporting/goals.example.md ~/weekly-data/goals.md
+cd ~/weekly-data
+
+# Copy templates from the installed plugin
+cp ~/.claude/plugins/cache/weekly/weekly-reporting/*/config.example.yaml config.yaml
+cp ~/.claude/plugins/cache/weekly/weekly-reporting/*/goals.example.md goals.md
 
 # Edit with your details
-code ~/weekly-data/config.yaml
-code ~/weekly-data/goals.md
+code config.yaml
+code goals.md
 ```
 
 **Optional:** For M365 Copilot chat evidence, install the scraper:
 ```bash
-cd ~/.claude/plugins/weekly-reporting/tools/copilot-scraper
+cd ~/.claude/plugins/cache/weekly/weekly-reporting/*/tools/copilot-scraper
 npm install
 ```
 
-> **Tip:** Add the marketplace for easy updates:
+> **Tip:** Update to the latest version anytime:
 > ```bash
-> claude plugin marketplace add bgervin/weekly
-> claude plugin update weekly-reporting
+> claude plugin update weekly-reporting@weekly
 > ```
 
 ### Clone Directly (for customization)
 
 ```bash
 git clone https://github.com/bgervin/weekly.git ~/weekly
-cd ~/weekly
-cp config.example.yaml config.yaml
-cp goals.example.md goals.md
+cd ~/weekly/plugins/weekly-reporting
+cp config.example.yaml ../../config.yaml
+cp goals.example.md ../../goals.md
 ```
 
 ### Other Agent Skills-Compatible Tools
@@ -211,7 +216,7 @@ These skills follow the [Agent Skills](https://agentskills.io) specification and
 - OpenAI Codex
 - Roo Code, Amp, Goose, and 20+ more
 
-Clone the repo and point your tool at the `skills/` directory.
+Clone the repo and point your tool at the `plugins/weekly-reporting/skills/` directory.
 
 ## Environment Variables
 
@@ -254,31 +259,34 @@ claude
 ## Directory Structure
 
 ```
-weekly/
-├── .claude-plugin/           # Plugin metadata
-│   ├── plugin.json           # Plugin configuration
-│   └── marketplace.json      # Marketplace manifest
-├── skills/                   # The skills that power everything
-│   ├── weekly-impact/
-│   ├── ado-evidence/
-│   ├── github-evidence/
-│   ├── m365-evidence/
-│   ├── m365copilot-evidence/
-│   ├── claude-evidence/
-│   └── edge-evidence/
-├── tools/
-│   └── copilot-scraper/      # Playwright-based M365 Copilot scraper
-├── config.example.yaml       # Config template (committed)
-├── goals.example.md          # Goals template (committed)
-├── .mcp.json                 # MCP server configuration
+weekly/                              # Marketplace repository
+├── .claude-plugin/
+│   └── marketplace.json             # Marketplace manifest
+├── plugins/
+│   └── weekly-reporting/            # The plugin
+│       ├── .claude-plugin/
+│       │   └── plugin.json          # Plugin configuration
+│       ├── skills/                  # The skills that power everything
+│       │   ├── weekly-impact/
+│       │   ├── ado-evidence/
+│       │   ├── github-evidence/
+│       │   ├── m365-evidence/
+│       │   ├── m365copilot-evidence/
+│       │   ├── claude-evidence/
+│       │   └── edge-evidence/
+│       ├── tools/
+│       │   └── copilot-scraper/     # Playwright-based M365 Copilot scraper
+│       ├── config.example.yaml      # Config template
+│       ├── goals.example.md         # Goals template
+│       └── .mcp.json                # MCP server configuration
 │
-│  ─── Personal (gitignored) ───
-├── config.yaml               # Your settings
-├── goals.md                  # Your goals & OKRs
+│  ─── Your working directory (~/weekly-data) ───
+├── config.yaml                      # Your settings
+├── goals.md                         # Your goals & OKRs
 └── weeks/
     └── 2026-01-25/
-        ├── evidence/         # Raw evidence markdown files
-        └── impact/           # Generated reports
+        ├── evidence/                # Raw evidence markdown files
+        └── impact/                  # Generated reports
 ```
 
 ## Requirements
