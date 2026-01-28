@@ -9,8 +9,5 @@
   "license": "MIT",
   "homepage": "https://github.com/bgervin/weekly",
   "repository": "https://github.com/bgervin/weekly",
-  "keywords": ["weekly", "impact", "reporting", "evidence", "goals", "okr"],
-  "engines": {
-    "claude-code": ">=2.0.0"
-  }
+  "keywords": ["weekly", "impact", "reporting", "evidence", "goals", "okr"]
 }
