@@ -10,16 +10,9 @@ You work hard all week—shipping code, reviewing PRs, attending meetings, mento
 
 This project solves that problem with **Claude Code skills** that automatically collect evidence of your work from everywhere it happens:
 
-<table>
-<tr>
-<td align="center"><img src="https://cdn.simpleicons.org/github/white" width="40"><br><b>GitHub</b><br><sub>PRs, Issues, Reviews</sub></td>
-<td align="center"><img src="https://cdn.simpleicons.org/azuredevops/0078D4" width="40"><br><b>Azure DevOps</b><br><sub>Work Items, Sprints</sub></td>
-<td align="center"><img src="https://cdn.simpleicons.org/microsoft/white" width="40"><br><b>Microsoft 365</b><br><sub>Email, Teams, Meetings</sub></td>
-<td align="center"><img src="https://cdn.simpleicons.org/microsoftedge/white" width="40"><br><b>Edge Browser</b><br><sub>Research, Documentation</sub></td>
-<td align="center"><img src="https://cdn.simpleicons.org/openai/white" width="40"><br><b>M365 Copilot</b><br><sub>Chat History</sub></td>
-<td align="center"><img src="https://cdn.simpleicons.org/anthropic/white" width="40"><br><b>Claude Code</b><br><sub>Sessions, Prompts</sub></td>
-</tr>
-</table>
+| GitHub | Azure DevOps | Microsoft 365 | Edge Browser | M365 Copilot | Claude Code |
+|:------:|:------------:|:-------------:|:------------:|:------------:|:-----------:|
+| PRs, Issues, Reviews | Work Items, Sprints | Email, Teams, Meetings | Research, Documentation | Chat History | Sessions, Prompts |
 
 Then AI analyzes your evidence against your goals and generates **impact reports tailored for different audiences**—your manager, skip-level, executive, and team.
 
